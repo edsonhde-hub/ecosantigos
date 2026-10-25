@@ -1,0 +1,79 @@
+:root{
+  --fundo:#12161b;
+  --superficie:#1a2027;
+  --texto:#e6e1d5;
+  --suave:#9ba4ab;
+  --acento:#86b5a6;
+  --linha:#2a323a;
+}
+*{box-sizing:border-box}
+html{background:var(--fundo)}
+body{
+  margin:0;
+  color:var(--texto);
+  background:var(--fundo);
+  font-family:"Newsreader",Georgia,"Times New Roman",serif;
+  font-size:1.2rem;
+  line-height:1.7;
+  -webkit-font-smoothing:antialiased;
+}
+a{color:var(--acento);text-underline-offset:.2em;transition:color .15s}
+a:hover{color:var(--texto)}
+a:focus-visible{outline:2px solid var(--acento);outline-offset:3px;border-radius:2px}
+
+.cabecalho,.principal,.rodape{width:min(100% - 2.5rem,44rem);margin-inline:auto}
+.cabecalho{display:flex;justify-content:space-between;align-items:baseline;padding:1.5rem 0;border-bottom:1px solid var(--linha)}
+.marca{font-size:1.35rem;font-weight:600;color:var(--texto);text-decoration:none;letter-spacing:.01em}
+.cabecalho nav a{color:var(--suave);text-decoration:none;font-size:1rem;margin-left:1.25rem}
+.cabecalho nav a:hover{color:var(--texto)}
+
+/* Abertura: círculos de eco */
+.abertura{
+  position:relative;
+  padding:5rem 0 4rem;
+  isolation:isolate;
+}
+.abertura::before{
+  content:"";
+  position:absolute;
+  inset:-2rem -3rem -2rem 30%;
+  z-index:-1;
+  background:repeating-radial-gradient(circle at 80% 50%,transparent 0 26px,rgba(134,181,166,.2) 26px 27px);
+  -webkit-mask-image:radial-gradient(circle at 80% 50%,#000 0,transparent 68%);
+  mask-image:radial-gradient(circle at 80% 50%,#000 0,transparent 68%);
+}
+.abertura h1{
+  margin:0 0 1.25rem;
+  font-size:clamp(2.4rem,7vw,3.8rem);
+  line-height:1.1;
+  font-weight:500;
+  letter-spacing:-.01em;
+  max-width:14ch;
+}
+.abertura p{margin:0;color:var(--suave);max-width:34rem}
+
+/* Lista de textos */
+.principal h2{font-size:1.1rem;font-weight:600;color:var(--suave);margin:0 0 .5rem}
+.lista{list-style:none;margin:0;padding:0}
+.lista li{padding:1.5rem 0;border-top:1px solid var(--linha)}
+.lista li:last-child{border-bottom:1px solid var(--linha)}
+.lista a.titulo{display:inline-block;font-size:1.6rem;line-height:1.25;font-weight:500;color:var(--texto);text-decoration:none}
+.lista a.titulo:hover{color:var(--acento)}
+.lista .referencia{display:block;margin-top:.35rem;color:var(--suave);font-size:.95rem}
+.lista p{margin:.6rem 0 0;color:var(--suave);font-size:1.05rem}
+
+/* Página de texto */
+.texto{padding:3.5rem 0 2rem}
+.texto .referencia{color:var(--acento);font-size:1rem;margin:0 0 .75rem}
+.texto h1{margin:0 0 2rem;font-size:clamp(2rem,6vw,3rem);line-height:1.15;font-weight:500}
+.texto p{margin:0 0 1.4rem}
+.texto blockquote{
+  margin:2rem 0;
+  padding:.25rem 0 .25rem 1.25rem;
+  border-left:2px solid var(--acento);
+  color:var(--suave);
+  font-style:italic;
+}
+.voltar{display:inline-block;margin:1.5rem 0 3rem;font-size:1rem}
+
+.rodape{padding:2rem 0 3rem;border-top:1px solid var(--linha);color:var(--suave);font-size:.95rem}
