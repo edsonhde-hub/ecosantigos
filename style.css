@@ -66,6 +66,7 @@ a:focus-visible{outline:2px solid var(--acento);outline-offset:3px;border-radius
 .texto{padding:3.5rem 0 2rem}
 .texto .referencia{color:var(--acento);font-size:1rem;margin:0 0 .75rem}
 .texto h1{margin:0 0 2rem;font-size:clamp(2rem,6vw,3rem);line-height:1.15;font-weight:500}
+.texto h2{margin:2.75rem 0 1rem;font-size:1.65rem;line-height:1.25;font-weight:500}
 .texto p{margin:0 0 1.4rem}
 .texto blockquote{
   margin:2rem 0;
