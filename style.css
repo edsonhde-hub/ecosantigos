@@ -78,3 +78,31 @@ a:focus-visible{outline:2px solid var(--acento);outline-offset:3px;border-radius
 .voltar{display:inline-block;margin:1.5rem 0 3rem;font-size:1rem}
 
 .rodape{padding:2rem 0 3rem;border-top:1px solid var(--linha);color:var(--suave);font-size:.95rem}
+
+/* Formulário de contato */
+.oculto{display:none}
+.formulario{margin-top:2rem}
+.formulario p{margin:0 0 1.25rem}
+.formulario label{display:block;margin-bottom:.35rem;color:var(--suave);font-size:1rem}
+.formulario input,.formulario textarea{
+  width:100%;
+  padding:.7rem .85rem;
+  background:var(--superficie);
+  color:var(--texto);
+  border:1px solid var(--linha);
+  border-radius:4px;
+  font:inherit;
+  font-size:1.05rem;
+}
+.formulario input:focus,.formulario textarea:focus{outline:2px solid var(--acento);outline-offset:1px;border-color:transparent}
+.formulario button{
+  padding:.7rem 1.6rem;
+  background:var(--acento);
+  color:var(--fundo);
+  border:0;
+  border-radius:4px;
+  font:inherit;
+  font-weight:600;
+  cursor:pointer;
+}
+.formulario button:hover{background:var(--texto)}
