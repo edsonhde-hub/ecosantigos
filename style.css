@@ -106,3 +106,20 @@ a:focus-visible{outline:2px solid var(--acento);outline-offset:3px;border-radius
   cursor:pointer;
 }
 .formulario button:hover{background:var(--texto)}
+
+/* Coluna lateral para anúncios (só aparece se tiver código dentro) */
+.lateral{margin:2.5rem auto 0;text-align:center}
+.lateral:empty{display:none}
+@media (min-width:1000px){
+  body:has(.lateral:not(:empty)) .cabecalho,
+  body:has(.lateral:not(:empty)) .rodape,
+  body:has(.lateral:not(:empty)) .principal{width:min(100% - 2.5rem,62rem)}
+  body:has(.lateral:not(:empty)) .principal{
+    display:grid;
+    grid-template-columns:minmax(0,44rem) 300px;
+    column-gap:3rem;
+    align-items:start;
+  }
+  body:has(.lateral:not(:empty)) .principal > *{grid-column:1}
+  body:has(.lateral:not(:empty)) .principal > .lateral{grid-column:2;grid-row:1 / span 8;margin-top:5rem}
+}
